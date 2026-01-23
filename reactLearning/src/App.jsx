@@ -23,3 +23,33 @@ export function Description (){
     </>
   )
 }
+
+// JSX is a javascript extension that lets us write html like markup inside javaScript Function
+
+// from years JS and html are main things to write html -- days were when interactivity was very rare with web pages but as of now webSites are expected to have interactivity so to do so react allows us to write jsx (markup) within the js function to allow it to be in a sync
+
+// putting exact html to a react component won't work as jsx is a bit more stricter so we need know some more rules 
+
+export function TodoList() {
+  // JSX turns into JavaScript and attributes written in JSX become keys of JavaScript objects. In your own components, you will often want to read those attributes into variables. But JavaScript has limitations on variable names. For example, their names can’t contain dashes or be reserved words like class.
+  return ( 
+    // <></> these tags are called fragments used to wrap jsx elements
+
+    // JSX looks like HTML, but under the hood it is transformed into plain JavaScript objects. You can’t return two objects from a function without wrapping them into an array. This explains why you also can’t return two JSX tags without wrapping them into another tag or a Fragment.
+    <> 
+    <h1>Hedy Lamarr's Todos</h1>
+    <img 
+      src="https://i.imgur.com/yXOvdOSs.jpg" 
+      alt="Hedy Lamarr" 
+
+    />
+    <ul>
+      <li>invent</li>
+      <li>delete</li>
+      <li>import</li>
+    </ul>
+    </>
+  )
+}
+
+
