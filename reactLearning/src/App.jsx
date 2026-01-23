@@ -31,6 +31,9 @@ export function Description (){
 // putting exact html to a react component won't work as jsx is a bit more stricter so we need know some more rules 
 
 export function TodoList() {
+
+  const name = 'Pavneet Singh' // using curly braces
+
   // JSX turns into JavaScript and attributes written in JSX become keys of JavaScript objects. In your own components, you will often want to read those attributes into variables. But JavaScript has limitations on variable names. For example, their names can’t contain dashes or be reserved words like class.
   return ( 
     // <></> these tags are called fragments used to wrap jsx elements
@@ -43,7 +46,12 @@ export function TodoList() {
       alt="Hedy Lamarr" 
 
     />
-    <ul>
+    {/* json and styles in css use double curly braces in jsx  */}
+    <ul style={{
+      backgroundColor:'black',
+      color:'pink'
+    }}>
+      <li>I want to meet Sr. {name} todays</li>
       <li>invent</li>
       <li>delete</li>
       <li>import</li>
@@ -52,4 +60,15 @@ export function TodoList() {
   )
 }
 
+// Using javaScript in JSX - sometimes to write some logic in the markup we need jsx but to do so we use {} - curly braces
+
+ export function Avatar(){
+
+  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+  const description = 'Gregorio Y. Zara';
+  return (
+    <img src={avatar} alt={description} className='avatar' />
+  );
+
+}
 
