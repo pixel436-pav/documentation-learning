@@ -86,7 +86,8 @@ export function Tutorial () {
   return (
     <>
     <Student name="lorem" age = {25} isStudent={true}/>
-    <Student name="Patrick" age = {42} isStudent={false}/>
+    <Student name="Patrick" age = {42} isStudent={true}/>
+    <Student/>
     </>
   )
 }
@@ -94,3 +95,6 @@ export function Tutorial () {
 // proptypes -  is a mechanism that ensures that the passed value is of correct data type. 
 // age: PropTypes.number 
 // working with props it also good to use proptypes
+
+
+// default props :- are the default values for the props in case they don't accept any - these are not passed from the parent components but set harcoded as backup values. 
