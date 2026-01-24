@@ -19,13 +19,20 @@ const Render3 = (props) => {
       
   //   });
 
-  const itemList = props.items
+  const itemList = props.items 
+  const category = props.category 
 
-  const listItems = itemList.map(item=> { return <li> {item.name}: {item.calories}</li> })
+  const listItems = itemList.map(item=> { return <li key={item.id}> {item.name}: {item.calories}</li> })
+
 
 
   return (
+    <>
+    <h3>{category}</h3>
     <ol>{listItems}</ol>
+  
+    </>
+    
   )
 }
 
