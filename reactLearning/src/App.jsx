@@ -1,4 +1,5 @@
 import React from 'react'
+import Student from './student.jsx'
 
 // React component - Component is a JS function that we can modify using markup , this lays stress on the concept of reusability , Components can be used multiple times in an APP , components are defined using the syntax written below and their names should be written by making the first letter capital or they won't work
 
@@ -78,3 +79,18 @@ export function TodoList() {
 // Props are the information that you pass to a JSX tag. For example, className, src, alt, width, and height are some of the props you can pass to an <img>:
 
 // props passed to image tag are predefined to to reactDOM ( it conforms to html standard ). But but we can pass any props to our own components , such as <Avatar> in this learning Project 
+
+// props are read only properties that are shared between components. A parent component  can send data to child component. <Component key=value/>
+
+export function Tutorial () {
+  return (
+    <>
+    <Student name="lorem" age = {25} isStudent={true}/>
+    <Student name="Patrick" age = {42} isStudent={false}/>
+    </>
+  )
+}
+
+// proptypes -  is a mechanism that ensures that the passed value is of correct data type. 
+// age: PropTypes.number 
+// working with props it also good to use proptypes
