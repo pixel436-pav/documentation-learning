@@ -62,13 +62,19 @@ export function TodoList() {
 
 // Using javaScript in JSX - sometimes to write some logic in the markup we need jsx but to do so we use {} - curly braces
 
- export function Avatar(){
+ export function Avatar({person,size =100 // here i am giving a harcoded default value , on which my prop can rely if no value is given to it 
+  }){ // to recieve props from another file you need to first except them as deconstructed params here
 
   const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
-  const description = 'Gregorio Y. Zara';
+  // const description = 'Gregorio Y. Zara';
   return (
-    <img src={avatar} alt={description} className='avatar' />
+    <img src={avatar} alt={person.name} width={size} height={size}  className='avatar' />
   );
 
 }
 
+// passing Props to a child component by a parent component - React Component use props to communicate with each other , Props can be used to pass some information (including java script arrays, objects , function - basically any javascript value ) 
+
+// Props are the information that you pass to a JSX tag. For example, className, src, alt, width, and height are some of the props you can pass to an <img>:
+
+// props passed to image tag are predefined to to reactDOM ( it conforms to html standard ). But but we can pass any props to our own components , such as <Avatar> in this learning Project 

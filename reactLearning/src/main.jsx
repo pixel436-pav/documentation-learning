@@ -12,8 +12,11 @@ createRoot(document.getElementById('root')).render(
     <App/>
     <Description/>
     <TodoList/>
-    <Avatar/>
-
+    <Avatar
+    person={{ name: 'lin Lanying', imageId: '1bX5QH6'}}
+    size={100}/>
+  
+  {/* // as i have passed these above values as props here now i can read them inside Avatar function inside its file */}
 
   </StrictMode>,
 )
