@@ -98,3 +98,37 @@ export function Tutorial () {
 
 
 // default props :- are the default values for the props in case they don't accept any - these are not passed from the parent components but set harcoded as backup values. 
+
+// Conditional Rendering - Rendering done based on Conditions never use if else only use ternary operators ?:
+
+// below is childComponent to PackingList function (Packing List Function is sending props to item based on which we are doing conditional rendering)
+function Item({ name, isPacked }) {
+  return <>
+  <li className="item">{name} {isPacked ?  "✅" : "❌"}</li>
+  {/* we can aslo use && when we want to render true and another value it false if the value is false nothing happens.
+  A JavaScript && expression returns the value of its right side (in our case, the checkmark) if the left side (our condition) is true. But if the condition is false, the whole expression becomes false. React considers false as a “hole” in the JSX tree, just like null or undefined, and doesn’t render anything in its place. */}
+  <li className="item">{name} {isPacked && "✅"}</li>
+  </>
+}
+
+export function PackingList() {
+  return (
+    <section >
+      <h1>Sally Ride's Packing List</h1>
+      <ul>
+        <Item 
+          isPacked={true} 
+          name="Space suit" 
+        />
+        <Item 
+          isPacked={true} 
+          name="Helmet with a golden leaf" 
+        />
+        <Item 
+          isPacked={false} 
+          name="Photo of Tam" 
+        />
+      </ul>
+    </section>
+  );
+}
