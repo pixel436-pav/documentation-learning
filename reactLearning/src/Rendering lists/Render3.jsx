@@ -22,6 +22,8 @@ const Render3 = (props) => {
   const itemList = props.items 
   const category = props.category 
 
+
+  // always use the return statement while using .map and .filter 
   const listItems = itemList.map(item=> { return <li key={item.id}> {item.name}: {item.calories}</li> })
 
 
