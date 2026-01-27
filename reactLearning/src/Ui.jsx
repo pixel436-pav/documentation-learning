@@ -3,7 +3,7 @@ import React from 'react'
 const Ui = () => {
   return (
     <div>
-      <body>
+      <section>
         React thinks that your nested components as a tree 
         <h2>UI as a Tree</h2>
         React represent UI as a tree , it uses tree structure to manage and model the relationship between react components 
@@ -20,8 +20,8 @@ const Ui = () => {
         Each node in a module dependency tree is a module and each branch represents an import statement in that module.
 
         If we take the previous Inspirations app, we can build a module dependency tree, or dependency tree for short.</p>
-        
-      </body>
+
+      </section>
     </div>
   )
 }
