@@ -8,6 +8,8 @@ import { Description, TodoList, Avatar, Tutorial, PackingList} from './App.jsx'
 import Render from './Rendering lists/Render.jsx'
 import Render2 from './Rendering lists/Render2.jsx'
 import Render3 from './Rendering lists/Render3.jsx'
+import {Hello,Guest} from './Pure Components/Pure.jsx'
+import Pure from './Pure Components/Pure.jsx'
 
 const fruits = [
   { id: 21, name: "apple", calories: 52 },
@@ -27,9 +29,21 @@ const vegetables = [
   { id: 8, name: "cauliflower", calories: 25 }
 ];
 
+ function TeaGathering(){
+    const cups = [];
+    for (let i = 0; i < 5; i++) {
+      
+      cups.push( <Guest key={i} guest={i}/> )
+    }
+    return cups;
+  }
 
 createRoot(document.getElementById('root')).render(
- 
+
+
+
+
+
   <StrictMode>
     <App/>
     <Description/>
@@ -43,8 +57,16 @@ createRoot(document.getElementById('root')).render(
     <Render2 />
     <Render3 items={fruits} category="Fruits"/>
     <Render3 items={vegetables} category="Vegetables"/>
+    <Pure drinkers={4} />
+    <Hello />
+    <Guest guest={2}/>
+    <Guest guest={4}/>
+    <Guest guest={5}/>
+    <TeaGathering/>
   
   {/* // as i have passed these above values as props here now i can read them inside Avatar function inside its file */}
 
   </StrictMode>,
+  
+ 
 )
