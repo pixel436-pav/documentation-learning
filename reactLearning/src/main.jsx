@@ -11,6 +11,7 @@ import Render3 from './Rendering lists/Render3.jsx'
 import {Hello,Guest} from './Pure Components/Pure.jsx'
 import Pure from './Pure Components/Pure.jsx'
 import Ui from './Ui.jsx'
+import Sate from './States/Sate.jsx'
 
 const fruits = [
   { id: 21, name: "apple", calories: 52 },
@@ -65,6 +66,7 @@ createRoot(document.getElementById('root')).render(
     <Guest guest={5}/>
     <TeaGathering/>
     <Ui/>
+    <Sate/>
   
   {/* // as i have passed these above values as props here now i can read them inside Avatar function inside its file */}
 
