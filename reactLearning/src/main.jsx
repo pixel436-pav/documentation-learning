@@ -40,10 +40,12 @@ const vegetables = [
     return cups;
   }
 
-createRoot(document.getElementById('root')).render(
+const root = createRoot(document.getElementById('root'))
 
 
 
+
+root.render(
 
 
   <StrictMode>
@@ -66,11 +68,17 @@ createRoot(document.getElementById('root')).render(
     <Guest guest={5}/>
     <TeaGathering/>
     <Ui/>
-    <Sate/>
+    <Sate value={2} onClick = {() => 
+        alert("Your are clicking on the button")
+     }/>
+    <Sate value={10} onClick = {()=>
+      alert("Yes it is the value 10")
+    }/>
   
   {/* // as i have passed these above values as props here now i can read them inside Avatar function inside its file */}
 
   </StrictMode>,
   
  
-)
+
+  )
