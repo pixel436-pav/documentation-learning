@@ -9,6 +9,9 @@ import React from 'react'
 
 // const onClick = alert("Your are clicking on the button")
 
+
+
+
 const Sate = ({value, onClick}) => {
 
   return (

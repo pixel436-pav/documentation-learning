@@ -11,7 +11,7 @@ import Render3 from './Rendering lists/Render3.jsx'
 import {Hello,Guest} from './Pure Components/Pure.jsx'
 import Pure from './Pure Components/Pure.jsx'
 import Ui from './Ui.jsx'
-import Sate from './States/Sate.jsx'
+import Sate from './States/Responding to events.jsx'
 
 const fruits = [
   { id: 21, name: "apple", calories: 52 },
